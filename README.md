@@ -36,33 +36,60 @@ The ADK Medical Assistant is an AI-powered system designed to streamline medical
 ## 🏗️ Architecture
 
 ADK-Medical-Assistant/
-├── MedicalAgent/                          # Main agent system
-│   ├── mcp_server/                        # MCP (Model Context Protocol) server
-│   │   ├── server.py                      # Core MCP server implementation
-│   │   ├── prompt.py                      # Transcription prompts
-│   │   ├── upload/                        # Audio file storage
-│   │   └── processing_files/              # Generated documents storage
-│   │       └── {audio_name}/              # Per-consultation folders
-│   │           ├── Transcript.txt
-│   │           ├── MedicalTemplate.txt
-│   │           ├── AssessmentPlan.txt
-│   │           ├── CriticReview.txt
-│   │           └── MedicalSummary.txt
-│   ├── sub_agents/                        # Specialized processing agents
-│   │   ├── AudioProcessor/                # Audio transcription
-│   │   └── parallel_processing_agent/     # Parallel document generation
-│   │       └── parallel_steps/
-│   │           ├── AssessmentPlanner/     # Treatment planning
-│   │           ├── Critic/                # Quality review
-│   │           └── medical_template_agent/
-│   │               └── sequence_steps/
-│   │                   ├── MedicalTemplate/    # Form filling
-│   │                   └── TemplateValidator/  # Validation
-│   └── utils/                             # Utilities and patches
-│       └── custom_adk_patches.py          # Custom ADK extensions
-├── streamlit-app.py                       # Web interface
-├── requirements.txt                       # Python dependencies
-└── README.md                              # This file
+
+├── MedicalAgent/ # Main agent system
+
+│ ├── mcp\_server/ # MCP (Model Context Protocol) server
+
+│ │ ├── server.py # Core MCP server implementation
+
+│ │ ├── prompt.py # Transcription prompts
+
+│ │ ├── upload/ # Audio file storage
+
+│ │ └── processing\_files/ # Generated documents storage
+
+│ │ └── {audio\_name}/ # Per-consultation folders
+
+│ │ ├── Transcript.txt
+
+│ │ ├── MedicalTemplate.txt
+
+│ │ ├── AssessmentPlan.txt
+
+│ │ ├── CriticReview.txt
+
+│ │ └── MedicalSummary.txt
+
+│ ├── sub\_agents/ # Specialized processing agents
+
+│ │ ├── AudioProcessor/ # Audio transcription
+
+│ │ └── parallel\_processing\_agent/ # Parallel document generation
+
+│ │ └── parallel\_steps/
+
+│ │ ├── AssessmentPlanner/ # Treatment planning
+
+│ │ ├── Critic/ # Quality review
+
+│ │ └── medical\_template\_agent/
+
+│ │ └── sequence\_steps/
+
+│ │ ├── MedicalTemplate/ # Form filling
+
+│ │ └── TemplateValidator/ # Validation
+
+│ └── utils/ # Utilities and patches
+
+│ └── custom\_adk\_patches.py # Custom ADK extensions
+
+├── streamlit-app.py # Web interface
+
+├── requirements.txt # Python dependencies
+
+└── README.md # This file
 
 ## 📋 Prerequisites
 
