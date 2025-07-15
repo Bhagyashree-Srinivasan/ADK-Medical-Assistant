@@ -1,0 +1,5 @@
+google-adk
+litellm
+google-generativeai
+mcp==1.9.1
+streamlit
