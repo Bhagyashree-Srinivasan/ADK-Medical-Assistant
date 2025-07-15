@@ -36,60 +36,38 @@ The ADK Medical Assistant is an AI-powered system designed to streamline medical
 ## 🏗️ Architecture
 
 ADK-Medical-Assistant/
-
-├── MedicalAgent/ # Main agent system
-
-│ ├── mcp\_server/ # MCP (Model Context Protocol) server
-
-│ │ ├── server.py # Core MCP server implementation
-
-│ │ ├── prompt.py # Transcription prompts
-
-│ │ ├── upload/ # Audio file storage
-
-│ │ └── processing\_files/ # Generated documents storage
-
-│ │ └── {audio\_name}/ # Per-consultation folders
-
-│ │ ├── Transcript.txt
-
-│ │ ├── MedicalTemplate.txt
-
-│ │ ├── AssessmentPlan.txt
-
-│ │ ├── CriticReview.txt
-
-│ │ └── MedicalSummary.txt
-
-│ ├── sub\_agents/ # Specialized processing agents
-
-│ │ ├── AudioProcessor/ # Audio transcription
-
-│ │ └── parallel\_processing\_agent/ # Parallel document generation
-
-│ │ └── parallel\_steps/
-
-│ │ ├── AssessmentPlanner/ # Treatment planning
-
-│ │ ├── Critic/ # Quality review
-
-│ │ └── medical\_template\_agent/
-
-│ │ └── sequence\_steps/
-
-│ │ ├── MedicalTemplate/ # Form filling
-
-│ │ └── TemplateValidator/ # Validation
-
-│ └── utils/ # Utilities and patches
-
-│ └── custom\_adk\_patches.py # Custom ADK extensions
-
-├── streamlit-app.py # Web interface
-
-├── requirements.txt # Python dependencies
-
-└── README.md # This file
+├── .gitignore
+├── MedicalAgent/                  # Main application source code
+│   ├── __init__.py
+│   ├── mcp_server/                # Server component (e.g., Flask/Django)
+│   │   ├── __init__.py
+│   │   ├── app.py                 # Main server file
+│   │   ├── routes.py              # API or web routes
+│   │   ├── models.py              # Database models
+│   │   ├── static/                # For CSS, JavaScript, images
+│   │   │   └── css/
+│   │   │       └── style.css
+│   │   ├── templates/             # HTML templates
+│   │   │   └── index.html
+│   │   ├── processing_files/      # Ignored directory for runtime files
+│   │   └── processing_files_sample1/ # Ignored directory for sample files
+│   └── core/                      # Core logic, helpers, etc.
+│       ├── __init__.py
+│       └── utils.py
+├── data/                          # For raw data, CSVs, etc.
+│   └── medical_records.csv
+├── docs/                          # Project documentation
+│   ├── conf.py
+│   └── index.rst
+├── tests/                         # Unit and integration tests
+│   ├── __init__.py
+│   └── test_app.py
+├── medenv/                        # Python virtual environment (ignored)
+│   ├── bin/
+│   ├── include/
+│   └── lib/
+├── README.md                      # Project description
+└── requirements.txt               # Project dependencies
 
 ## 📋 Prerequisites
 
